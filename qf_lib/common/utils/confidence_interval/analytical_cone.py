@@ -16,7 +16,6 @@ from datetime import datetime
 from math import exp
 
 import numpy as np
-from pandas import Int64Index
 
 from qf_lib.common.utils.confidence_interval.analytical_cone_base import AnalyticalConeBase
 from qf_lib.containers.dataframe.qf_dataframe import QFDataFrame

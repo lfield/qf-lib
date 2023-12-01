@@ -12,7 +12,7 @@
 #     See the License for the specific language governing permissions and
 #     limitations under the License.
 
-from collections import Sequence
+from collections.abc import Sequence
 from typing import Tuple, Union, Any
 from scipy.stats import norm
 

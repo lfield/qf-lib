@@ -17,7 +17,6 @@ from typing import Union, Callable
 
 import numpy as np
 import pandas as pd
-from pandas.core.construction import is_empty_data
 
 from qf_lib.common.enums.frequency import Frequency
 from qf_lib.containers.time_indexed_container import TimeIndexedContainer
@@ -30,7 +29,7 @@ class QFSeries(pd.Series, TimeIndexedContainer):
 
     def __init__(self, data: object = None, index: object = None, dtype: object = None, name: object = None,
                  copy: object = False, fastpath: object = False):
-        if is_empty_data(data) and dtype is None:
+        if len(data) == 0 and dtype is None:
             dtype = np.dtype(np.float64)
         super().__init__(data, index, dtype, name, copy, fastpath)
 
